@@ -1,14 +1,19 @@
-let s = "babad"
-
+let charFrequency = {}
+let oddFrequency = 0
 for (let char of s) {
-    charFrequency[char] = (charFrequency[char] || 0) + 1;
-    if (charFrequency[char] % 2 === 1)
-        oddFrequencyCount++;
-    else
-        oddFrequencyCount--;
-}
-if (oddFrequencyCount > 1) {
-    return s.length - oddFrequencyCount + 1;
-}
+    charFrequency[char] = charFrequency[char] + 1 || 1
 
-return s.length;
+    if (charFrequency[char] % 2 == 1) {
+        oddFrequency++
+
+    } else {
+        oddFrequency--
+    }
+
+
+
+}
+if (oddFrequency > 1) {
+    return s.length - oddFrequency + 1
+}
+return s.length
